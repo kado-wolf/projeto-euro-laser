@@ -1,0 +1,121 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Usuario {
+  id        Int                  @id @default(autoincrement())
+  codigo    String               @unique
+  nome      String?
+  cargo     String?
+  producoes FatoOrdemProduzida[]
+}
+
+model Maquina {
+  id          Int                  @id @default(autoincrement())
+  codigo      String               @unique
+  nome        String
+  tipoMaquina String
+  producoes   FatoOrdemProduzida[]
+}
+
+model Marca {
+  id        Int    @id @default(autoincrement())
+  codigo    String @unique
+  descricao String
+}
+
+model Produto {
+  id                Int                 @id @default(autoincrement())
+  codigo            String
+  nome              String
+  preco             Float?
+  codigoCor         String
+  data_cad          DateTime?
+  unidade           String?
+  grupo             String?
+  linha             String?
+  familia           String?
+  status            String?
+  espessura         Float?
+  peso              Float?
+  marca             String?
+  cor_ativa         String?
+  chave_produto_cor String              @unique
+  custo Float?   // opcional, aceita NULL
+  ordensPorChave    FatoOrdemProducao[] @relation("ProdutoPorChave")
+
+  @@index([codigo])
+}
+
+model Cliente {
+  id             Int                 @id @default(autoincrement())
+  codigo         String              @unique
+  nome           String
+  nomeFantasia   String
+  cod_est        String
+  telefone       String
+  email          String
+  nome_cid       String
+  ativo          String
+  ordensProducao FatoOrdemProducao[]
+  pedidos        FatoPedidos[]       @relation("ClientePedidos")
+}
+
+model FatoOrdemProducao {
+  codigoOp            String               @id
+  codigoCor           String
+  qtdProduzir         Int
+  dataCriacaoOp       DateTime
+  codigo_cliente      String
+  codigo_produto      String
+  qtde                Int
+  qtde_b              Int
+  pedido              String
+  chave_produto_cor   String
+  dataPrevistaEntrega DateTime?
+  produtoChave        Produto              @relation("ProdutoPorChave", fields: [chave_produto_cor], references: [chave_produto_cor])
+  cliente             Cliente              @relation(fields: [codigo_cliente], references: [codigo])
+  producoes           FatoOrdemProduzida[]
+
+  @@index([chave_produto_cor])
+}
+
+model FatoOrdemProduzida {
+  id                Int               @id @default(autoincrement())
+  codigoOp          String
+  maquinaId         Int?
+  qtdTotalProduzida Int
+  qtdTotalFaltante  Int
+  qtdTotalDefeito   Int
+  dataInicioProd    DateTime
+  dataFimProd       DateTime?
+  codigo_usuario    String
+  ordemProducao     FatoOrdemProducao @relation(fields: [codigoOp], references: [codigoOp])
+  usuario           Usuario           @relation(fields: [codigo_usuario], references: [codigo])
+  maquina           Maquina?          @relation(fields: [maquinaId], references: [id])
+}
+
+model FatoPedidos {
+  id                Int      @id @default(autoincrement())
+  codigo_pedido     String   @unique
+  codigo_cliente    String
+  ped_cli           String
+  dt_emissao        DateTime
+  perc_desc         Float
+  vlr_desc          Float
+  pgto              String
+  preco             Float
+  valor             Float
+  faturado          Float
+  cancelado         String
+  valor_total_liq   Float
+  valor_total_fat   Float
+  valor_total_pen   Float
+  valor_total_bruto Float
+  cliente           Cliente  @relation("ClientePedidos", fields: [codigo_cliente], references: [codigo])
+}

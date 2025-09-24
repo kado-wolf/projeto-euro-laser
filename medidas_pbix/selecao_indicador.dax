@@ -1,0 +1,11 @@
+Indicador de Campo = 
+
+VAR selecao = SELECTEDVALUE('Indicador - Eficiência'[Indicador - Eficiência Pedido])
+
+RETURN
+    SWITCH(
+        TRUE(),
+        selecao = 1,Medidas[Tempo p/ 100 peças (min)],
+        selecao = 3,Medidas[Qtd Média por Hora],
+        BLANK()
+    )

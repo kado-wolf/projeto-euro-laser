@@ -1,0 +1,12 @@
+Quantidade Total Faltante = 
+
+
+VAR quantidade_fazer = MAX(FatoOrdemProduzida[qtd_original])
+VAR quantidade_prod  = [Quantidade Peças Produzidas]
+VAR faltante         = quantidade_fazer - quantidade_prod
+RETURN
+IF(
+    ISINSCOPE(Usuario[primeironome]),   -- quando estiver no nível de Usuário
+    BLANK(),                            -- mostra em branco
+    faltante                            -- nos demais níveis (OP, total, etc.)
+)

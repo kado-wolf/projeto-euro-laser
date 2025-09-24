@@ -1,0 +1,14 @@
+Tempo (min) = 
+
+SUMX(
+    FILTER(
+        FatoOrdemProduzida,
+        NOT ISBLANK(FatoOrdemProduzida[dataInicioProd]) &&
+        NOT ISBLANK(FatoOrdemProduzida[dataFimProd])
+    ),
+    DATEDIFF(
+        FatoOrdemProduzida[dataInicioProd],
+        FatoOrdemProduzida[dataFimProd],
+        MINUTE
+    )
+)

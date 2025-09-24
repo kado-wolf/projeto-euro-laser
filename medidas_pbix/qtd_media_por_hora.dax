@@ -1,0 +1,9 @@
+Qtd Média por Hora = 
+
+DIVIDE(
+    SUM(FatoOrdemProduzida[qtdTotalProduzida]),
+    SUMX(
+        FatoOrdemProduzida,
+        DATEDIFF(FatoOrdemProduzida[dataInicioProd], FatoOrdemProduzida[dataFimProd], MINUTE) / 60
+    )
+)

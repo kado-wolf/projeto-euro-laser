@@ -1,0 +1,9 @@
+% Quantidade Total de OP = 
+
+DIVIDE(
+    DISTINCTCOUNT(FatoOrdemProducao[codigoOp]),
+    CALCULATE(
+        DISTINCTCOUNT(FatoOrdemProducao[codigoOp]),
+        ALL(FatoOrdemProducao)
+    )
+)
