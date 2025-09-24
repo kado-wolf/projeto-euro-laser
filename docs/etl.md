@@ -10,25 +10,23 @@ Obs: Os arquivos ipynb foram transformados em .py posteriormente.
 
 ## Bibliotecas
 
-![alt text](image.png)
+![Bibliotecas](../imagens/bibliotecas_produtos.png)
 
 ## Consumo da API
 
-![alt text](image-1.png)
+![Bibliotecas](../imagens/consumo_api_produtos.png)
 
 ## Funções
 
-![alt text](image-2.png)
+![Bibliotecas](../imagens/funcoes.png)
 
 ## Validação
 
 Foram encontrados alguns casos em que temos produtos em Ordens de Produção que não estão em "Produtos" para isso fizemos a validação abaixo e os que encontramos inserimos na tabela com as demais informações como "Não Identificado".
 
-![alt text](image-3.png)
+![Bibliotecas](../imagens/validacao.png)
 
 ## Load
-![alt text](image-4.png)
+![Bibliotecas](../imagens/load_produtos.png)
 
 *Para mais detalhes, veja os arquivos completos em \etl\notebooks*
-
-
