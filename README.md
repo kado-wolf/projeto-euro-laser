@@ -28,9 +28,9 @@ Com isso tudo feito, conseguimos chegar a entrega final, que foi um Dashboard in
 
 ## Documentação
 
-- [Visão Geral](docs/00_overview.md)
-- [Arquitetura do Sistema](docs/01_arquitetura.md)
-- [Modelagem de Dados](docs/02_modelagem.md)
-- [Fluxo de ETL](docs/03_etl_flow.md)
-- [KPIs (SQL + DAX)](docs/04_kpis_sql_dax.md)
-- [Notas de Deployment](docs/05_deployment_notas.md)
+- [Arquitetura do Sistema](docs/arquitetura.md)
+- [Modelagem de Dados - SQL](docs/modelagem.md)
+- [ETL](docs/etl.md)
+- [Schema - Prisma](sql/modelagem/schema.prisma)
+- [Query SQL - Exemplo)](sql/querys/fato_ordem_producao.sql)
+- [Modelagem de Dados - Power BI](docs/modelagem_powerbi.md)
