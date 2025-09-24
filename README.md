@@ -1,14 +1,12 @@
-# Projeto EuroLaser (Dados)
+# Projeto de Dados na Indústria Têxtil
 
-Este projeto foi realizado para a empresa Eurolaser situada na cidade de Brusque-SC. O que está apresentado neste repositório não contém informações sigilosas.
+Este projeto foi realizado para uma empresa situada na cidade de Brusque-SC. O que está apresentado neste repositório não contém informações sigilosas.
 
-## Sobre a Eurolaser
+## Sobre a Empresa
 
-A Eurolaser, localizada em Brusque (SC), atua no segmento de confecção oferecendo soluções ágeis e de alta qualidade em corte a laser para a indústria têxtil.
+A empresa localizada em Brusque (SC), atua no segmento de confecção oferecendo soluções ágeis e de alta qualidade em corte a laser para a indústria têxtil.
 
-Hoje a empresa conta com mais de 300 clientes ativos, 6 milhões de etiquetas feitas por ano e um parque fábril de 500 m².
-
-Site: https://www.eurolaser.com.br/#
+Hoje a empresa conta com mais de 300 clientes ativos e um parque fábril de 500 m².
 
 ## Objetivo do Projeto
 
