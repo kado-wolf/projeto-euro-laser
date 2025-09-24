@@ -1,3 +1,3 @@
 # Arquitetura Simplificada do Projeto Eurolaser
 
-![alt text](arquitetura_eurolaser.png)
+![alt text](imagens/arquitetura_eurolaser.png)
