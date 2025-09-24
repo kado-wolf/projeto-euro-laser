@@ -1,3 +1,3 @@
 ## Modelagem de Dados no Power BI
 
-![alt text](<modelagem_powerbi.png>)
+![Bibliotecas](../imagens/modelagem_powerbi.png)
