@@ -10,7 +10,7 @@ Hoje a empresa conta com mais de 300 clientes ativos e um parque fábril de 500 
 
 ## Objetivo do Projeto
 
-A Eurolaser tinha como principal necessidade a visão gerencial de produtividade dos seus colaboradores. A empresa conta hoje com aproximadamente 10 máquinas e cerca de 30 colaboradores.
+A empresa tinha como principal necessidade a visão gerencial de produtividade dos seus colaboradores. A empresa conta hoje com aproximadamente 10 máquinas e cerca de 30 colaboradores.
 
 O principal ponto era ter a visão de quantidade de peças, valor produzido e tempo médio por colaborador e máquina.
 
